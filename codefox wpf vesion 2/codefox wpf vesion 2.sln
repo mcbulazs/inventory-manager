@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codefox wpf vesion 2", "codefox wpf vesion 2.csproj", "{282EB591-F70C-404D-8C14-A2D8DDF424EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{282EB591-F70C-404D-8C14-A2D8DDF424EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282EB591-F70C-404D-8C14-A2D8DDF424EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282EB591-F70C-404D-8C14-A2D8DDF424EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282EB591-F70C-404D-8C14-A2D8DDF424EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CD2C775-28BC-4163-9BEB-C922228E8B25}
+	EndGlobalSection
+EndGlobal

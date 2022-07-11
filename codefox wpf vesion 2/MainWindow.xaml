@@ -1,0 +1,131 @@
+﻿<Window Name="window"
+        x:Class="codefox_wpf_vesion_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:codefox_wpf_vesion_2"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        MinHeight="450"
+        Width="800"
+        MinWidth="500"
+        SizeChanged="window_SizeChanged" 
+        Closing="window_Closing" 
+        WindowStartupLocation="CenterScreen" StateChanged="window_StateChanged"
+        >
+    <Grid>
+        <TabControl >
+            <TabItem  Background="DarkGray" Name="productsTab" Height="30" FontSize="20" Header="Terméklista" >
+                <Grid Name="productsGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox x:Name="datagridVB" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <DataGrid CanUserResizeColumns="False" Name="productslistDatagrid" SelectionMode="Single" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" SelectionChanged="productslistDatagrid_SelectionChanged"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"  Name="openFileVB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" Width="200">
+                        <Button Name="openFileBtn" Content="Terméklista betöltése" Click="openFileBtn_Click"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"  x:Name="saveFileVB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,50,0,0" Width="200">
+                        <Button x:Name="saveFileBtn" Content="Terméklista mentése"  Click="saveFileBtn_Click"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"  x:Name="newRowVB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,100,0,0" Width="200">
+                        <Button x:Name="newRowBtn" Content="Új termék hozzáadása" Click="newRowBtn_Click"  />
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"  x:Name="listModifyVB" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,150,0,0" Width="200">
+                        <Button x:Name="listModifyBtn" Content="Listarács módosítása" Click="listModifyBtn_Click"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Visibility="Hidden"  x:Name="selectedItemVb" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,200,0,0" Width="200">
+                        <StackPanel >
+                            <TextBox Name="selectedItemCodeTB" KeyDown="selectedItemCodeTB_KeyDown"/>
+                            <TextBox Name="selectedItemNameTB" KeyDown="selectedItemNameTB_KeyDown"/>
+                            <TextBox Name="selectedItemPriceTB" KeyDown="selectedItemPriceTB_KeyDown"/>
+                            <Button Content="Módosítások mentése" Name="saveModifyBtn" Click="saveModifyBtn_Click"/>
+                            <Button Content="Termék törlése" Name="deleteRowBtn" Click="deleteRowBtn_Click"/>
+                        </StackPanel>
+                    </Viewbox>
+                </Grid>
+            </TabItem>
+            <TabItem Margin="5 0 5 0" Background="DarkGray" Name="poolTab" Height="30" FontSize="20" Header="Bevételezés">
+                <Grid Name="supplyGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Name="supplyDatagridVB" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="top">
+                        <DataGrid CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" IsReadOnly="true" Name="supplyDatagrid"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                        x:Name="supplyAddVB" HorizontalAlignment="right" VerticalAlignment="Top" Margin="500,150,0,0" Width="200" >
+                        <StackPanel Orientation="Horizontal" Name="supplyAddPanel">
+                            <TextBox Name="supplyBarcodeTB" KeyDown="supplyBarcodeTB_KeyDown"/>
+                            <TextBox Margin="5,0,5,0" Name="supplyAmountTB" KeyDown="supplyAmountTB_KeyDown" />
+                            <Button Name="supplyAddBtn" Content="+" Click="supplyAddBtn_Click" />
+                        </StackPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" x:Name="supplyModifyVB" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <DockPanel>
+                            <Button Content="Tétel törlése" Name="supplyDeleteRowBtn" Margin="0,0,30,0" Click="supplyDeleteRowBtn_Click"/>
+                            <Button Content="Mennnyiség módosítása" Name="supplyModifyRowBtn" Click="supplyModifyRowBtn_Click"/>
+                        </DockPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" x:Name="supplySaveVB" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <DockPanel>
+                            <Button Content="Lista feltöltése" Name="supplyUploadRowBtn" Margin="0,0,30,0" Click="supplyUploadRowBtn_Click"/>
+                            <Button Content="Lista törlése" Name="supplyCancelBtn" Click="supplyCancelBtn_Click"/>
+                        </DockPanel>
+                    </Viewbox>
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Background="DarkGray" Name="salesTab" Height="30" FontSize="20" Header="Értékesítés">
+                <Grid Name="salesGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Name="salesDatagridVB" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="top">
+                        <DataGrid CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" IsReadOnly="true" Name="salesDatagrid"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1"
+                        x:Name="salesAddVB" HorizontalAlignment="right" VerticalAlignment="Top" Margin="500,150,0,0" Width="200" >
+                        <StackPanel Orientation="Horizontal" Name="salesAddPanel">
+                            <TextBox Name="salesBarcodeTB" KeyDown="salesBarcodeTB_KeyDown" />
+                            <TextBox Margin="5,0,5,0" Text="1" Name="salesAmountTB" KeyDown="salesAmountTB_KeyDown"/>
+                            <Button Name="salesAddBtn" Content="+" Click="salesAddBtn_Click"  />
+                        </StackPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" x:Name="salesModifyVB" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <DockPanel>
+                            <Button Content="Tétel törlése" Name="salesDeleteRowBtn" Margin="0,0,30,0" Click="salesDeleteRowBtn_Click"/>
+                            <Button Content="Mennnyiség módosítása" Name="salesModifyRowBtn" Click="salesModifyRowBtn_Click"/>
+                        </DockPanel>
+                    </Viewbox>
+                    <Viewbox HorizontalAlignment="Center" Grid.Column="1" x:Name="priceVB">
+                        <Label Name="priceLb" Content="0Ft"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" x:Name="salesSaveVB" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+
+                                <Button Content="Vásárlás befejezése" Name="salesSaveBtn" Margin="0,0,30,0" Click="salesSaveBtn_Click"/>
+                            <Button Content="Vásárlási lista törlése" Name="salesCancelBtn" Click="salesCancelBtn_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox VerticalAlignment="Center" Name="priceCb"/>
+                                <Label Content="Készpénzes fizetés"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Viewbox>
+                    
+
+                </Grid>
+            </TabItem>
+            
+        </TabControl>
+
+    </Grid>
+</Window>

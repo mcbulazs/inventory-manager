@@ -1,0 +1,27 @@
+D:\Codefox\codefox 2\codefox wpf vesion 2\bin\Debug\codefox wpf vesion 2.exe.config
+D:\Codefox\codefox 2\codefox wpf vesion 2\bin\Debug\codefox wpf vesion 2.exe
+D:\Codefox\codefox 2\codefox wpf vesion 2\bin\Debug\codefox wpf vesion 2.pdb
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.csprojAssemblyReference.cache
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\MainWindow.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\App.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2_MarkupCompile.cache
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2_MarkupCompile.lref
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\MainWindow.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.g.resources
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox_wpf_vesion_2.Properties.Resources.resources
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.csproj.GenerateResource.cache
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.csproj.CoreCompileInputs.cache
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.exe
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\codefox wpf vesion 2.pdb
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\ListExpanding.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\ListExpanding.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\saveFileWindow.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\saveFileWindow.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\NewItem.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\NewItem.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\missingBarcode.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\missingBarcode.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\amount change.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\amount change.baml
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\Confirmation.g.cs
+D:\Codefox\codefox 2\codefox wpf vesion 2\obj\Debug\Confirmation.baml
